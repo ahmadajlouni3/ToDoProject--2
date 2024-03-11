@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: Madimi One , arial;
+    font-size: 20px;
+    text-align: center;
+    margin:0;
+    background-color: #fffffe;
+    height:100vh;
+    color:#272343;
+}
+
+.appContainer{
+    background-color:#e3f6f5;
+    padding:10px 20px;
+    width:50%;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    border-radius:10px;
+    box-sizing: border-box;
+    animation : loopInitial 0.5s ease-out 1;
+    margin: 20px auto;
+}
+h2{
+    background-color:#fffffe;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    margin:5px;
+}
+input{
+    padding:3px;
+    font-family: Madimi One , arial;
+    font-size: 16px;
+    width:50%;
+    margin:10px 0px;
+    margin-right:10px;
+    border:none;
+    border-bottom:2px solid #272343;
+}
+input:focus{
+    outline:none;
+}
+#list{
+    list-style: none;
+    padding:0;
+    margin:10px;
+}
+[class^="item_"]{
+    background-color:#fffffe;
+    padding:10px 15px;
+    margin:10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    text-align: left;
+    border-radius: 2px;
+    display:flex;
+    justify-content: space-between;
+}
+button{
+    background-color:#ffd803;
+    color:#2d334a;
+    font-family: Madimi One , arial;
+    font-size: 18px;
+    border: none;
+    padding:0px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px rgba(0,0,0,0.5);
+    transition: all 0.05s;
+    width:100px;
+    margin:5px;
+}
+ button:active{
+    transform: translateY(3px);
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+}
+[class^="item_"] .itemButtonsContainer{
+    display: flex;
+    flex-flow:column nowrap;
+}
+[class^="item_"] .itemTextContainer{
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+#errorMsg{
+    position: absolute;
+    top:10px;
+    right:10px;
+    background-color:tomato;
+    border-left:5px solid red;
+    padding:10px 20px;
+    display:none;
+    color:#fffffe;
+}
+@media screen and (max-width : 1000px){
+    .appContainer{
+        width:70%;
+    }
+}
+@media screen and (max-width : 650px){
+    .appContainer{
+        width:90%;
+    }
+    [class^="item_"]{
+        flex-flow: column nowrap;
+    }
+    .itemButtonsContainer{
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes loopInitial{
+    0%{transform: scale(0);}
+    50% {transform: scale(1.1);}
+    100%{transform:  scale(1)}
+}
