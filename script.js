@@ -46,7 +46,7 @@ const insertAndDisplay = (function (){
             window.location.reload();
         }
 
-        allData.forEach(data => {
+        allData.sort().forEach(data => {
             //DOM Creator
             const item = create.ele("li");
             create.setAttr(item, {
